@@ -5,16 +5,13 @@
     <link rel="shortcut icon" href="./Resources/icons8-shell-80.png" type="image/x-icon">
     <link rel='stylesheet' href='./styles.css' type='text/css'>
     <meta charset="UTF-8">
-    <title>Cove & Cottage</title>
-  <script src="https://kit.fontawesome.com/50e44597fa.js" crossorigin="anonymous"></script>
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Recursive:wght@300&display=swap" rel="stylesheet">
+    <title>Cove & Cottage</title>  
+    <script src="https://kit.fontawesome.com/50e44597fa.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Recursive:wght@300&display=swap" rel="stylesheet">
   </head>
 
   <body>
-
-    <!--Main Grid-->
-    <div class="grid">
 
     <!---Header-->    
     <header>
@@ -22,51 +19,56 @@
         <h1>Cove & Cottage</h1>
         <p class="subtitle">Luxury Seaside <br>Accomodation</p>
         <nav>
-          <span><a href="#">About</a></span>
           <span><a href="#">Gallery</a></span>
+          <span><a href="#">About</a></span>
           <span><a href="#">Contact</a></span>
         </nav>
       </div>
     </header>
 
     <!---Image Carousel-->
-    <div class="carousel-container">
-      <div class="image-slide fade">
-        <img src="./Resources/1.jpg" class="dog">
+    <div class="carousel flex-container">
+      <div class="img-slide">
+        <img src="./Resources/3.jpg">
       </div>
 
-      <div class="image-slide fade">
-        <img src="./Resources/2.jpg" class="dog">
+      <div class="img-slide">
+        <img src="./Resources/2.jpg">
       </div>
 
-      <div class="image-slide fade">
-        <img src="./Resources/3.jpg" class="dog">
-      </div>
-
-      <!--Next and previous buttons-->
-      <a class="prev" onclick="slides(-1)"></a>
-      <a class="next" onclick="slides(1)"></a>
-      <br>
-      <!-- The dots/circles -->
-      <div style="text-align:center">
-        <span class="dot" onclick="currentSlide(1)"></span>
-        <span class="dot" onclick="currentSlide(2)"></span>
-        <span class="dot" onclick="currentSlide(3)"></span>
+      <div class="img-slide">
+        <img src="./Resources/1.jpg">
       </div>
     </div>
 
     <!--About Section-->
-      <div class="flex-container left">
+    <div class="about flex-container">
+      <div class="left">
         <h3 class="section-header">About</h3>
         <p class="text">
           Charming coastal accomodation. A stone's throw from the beach. Come and experience the radiant beauty of the Garden Route.
         </p>
       </div>
 
-      <div class="flex-container right">
+      <div class="right">
         <img src="Resources/2.jpg">
       </div>
-
     </div>
+
+    <!---Contact Section-->
+    <div class="contact flex-container">
+      <div class="left">
+
+      </div>
+
+      <div class="right">
+
+      </div>
+    </div>
+
+    <!---Footer-->
+    <footer>
+      <h3>footer</h3>
+    </footer>
   </body>
 </html>

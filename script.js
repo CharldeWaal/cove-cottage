@@ -2,16 +2,16 @@ var slideIndex = 1;
 showSlides(slideIndex);
 
 //Next/previous slide
-let slides = n => {
+function incSlides(n) {
   showSlides(slideIndex += n);
 }
 
 //Thumbnail image controls
-let currentSlide = n => {
-  showSlides(n);
+function currentSlide(n) {
+  showSlides(slideIndex = n);
 }
 
-let showSlides = n => {
+function showSlides(n) {
   var i;
   var slides = document.getElementsByClassName("image-slide");
   var dots = document.getElementsByClassName("dot");
@@ -20,7 +20,11 @@ let showSlides = n => {
     slideIndex = 1;
   }
 
-  for(i = 0; i < slides.length; i++){
+  if(n < 1) {
+    slideIndex = slides.length;
+  }
+
+  for(i = 0; i < slides.length; i++) {
     slides[i].style.display = "none";
   }
 

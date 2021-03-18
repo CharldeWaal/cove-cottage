@@ -1,10 +1,11 @@
-html {
+* {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
   }
-  *,
-  *:before,
-  *:after {
-    box-sizing: inherit;
+
+  html, body {
+      height: 100vh;
   }
 
 body {
@@ -13,11 +14,8 @@ body {
     background-color: #ffffff;
     color: #727272;
     text-align: center;
-}
-
-.grid{
     display:grid;
-    grid-template: repeat(6, 1fr) / repeat(12, 1fr);
+    grid-template: 10% 35% 25% 25% 5% / repeat(6, 1fr);
     justify-content: center;
     justify-items: center;
     align-items: center;
@@ -32,7 +30,7 @@ header {
     width: 100%;
     background-color: #ffffff;
     grid-column-start: 1;
-    grid-column-end: 13;
+    grid-column-end: 7;
 }
 
 header h1 {
@@ -66,26 +64,24 @@ a {
     display: flex;
     align-items: center;
     justify-content: center;
+    grid-column: 1 / 7;
+    width: 100%;
 }
 
-.flex-item {
-    justify-content: center;
-    flex-wrap: nowrap;
-    flex-grow: 1;
-    flex-shrink: 1;
+.carousel .flex-container {
+    align-items: center;
+    flex-wrap: wrap;
+    flex: 1 2;
 }
 
-.banner {
-    margin-top: 2.8rem;
-    grid-column: 1 / 13;
-}
-
-.banner img {
-    max-width: 100%;
-}
-
-.about {
-    margin-top: 50px;
+/* Image Carousel */
+.img-slide img{
+    display: block;
+    height: 200px;
+    width: 300px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
 }
 
 .about img {
@@ -94,15 +90,23 @@ a {
 }
 
 .left {
-    grid-column: 2 / span 5;
+    grid-column: 1 / span 3;
     background-color: coral;
+    display: none;
 }
 
 .right {
-    grid-column: 5 / span 5;
+    grid-column: 3 / span 3;
     background-color: cornflowerblue;
+    display: none;
 }
 
 .right img {
     max-width: 100%;
+}
+
+footer {
+    width: 100%;
+    background-color: coral;
+    grid-column: 1 / 7;
 }
