@@ -7,7 +7,8 @@
     <meta charset="UTF-8">
     <title>Cove & Cottage</title>  
     <script src="https://kit.fontawesome.com/50e44597fa.js" crossorigin="anonymous"></script>
-    <script defer src="script.js"></script>
+    <script defer src="scroll.js"></script>
+    <script src="map.js"></script>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Recursive:wght@300&display=swap" rel="stylesheet">
   </head>
@@ -18,12 +19,13 @@
     <div class="grid">
     <!---Header-->    
     <header id="home" class="flex-container">
-      <h1><a href="#index.html">Cove & Cottage</a></h1>
+      <h1><a onclick="scrollToTop()">Cove & Cottage</a></h1>
       <p class="subtitle">Luxury Seaside <br>Accomodation</p>
       <nav>
         <span><a href="#gallery">Gallery</a></span>
         <span><a href="#aboutSection">About</a></span>
         <span><a href="#contactSection">Contact</a></span>
+        <span><a href="#locationSection">Location</a></span>
       </nav>
     </header>
 
@@ -67,10 +69,31 @@
       </div>
     </div>
 
+    <!--Location Section-->
+    <div id="locationSection" class="location flex-container">
+      <div class="left">
+        <h3 class="section-header">Address</h3>
+        <img src="./Resources/icons8-google-maps-48.png">
+        <h4>10 Huckle St</h4>
+        <p>Mossel Bay<br>6500</p>
+      </div>
+      <div id="map" class="right">
+
+      </div>
+    </div>
+
     <!---Footer-->
     <footer class="flex-container">
-      <h3>footer</h3>
+      <span><a class="terms" href="#">Terms & Conditions</a></span>
+      <div class="footer-items">
+        <h4>&COPY; Cove&Cottage 2021</h4>
+        <h4>Website by <span><a href="#">C. de Waal</a></span></h4>
+      </div>
     </footer>
   </div>
+
+    <!-- Async script executes immediately and must be after any DOM elements used in callback. -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBsTBRux1uWuguAihJFsRXJTsD20fY4hEI&callback=initMap&libraries=&v=weekly" async></script>
+
   </body>
 </html>
