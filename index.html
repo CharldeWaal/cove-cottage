@@ -7,15 +7,18 @@
     <meta charset="UTF-8">
     <title>Cove & Cottage</title>  
     <script src="https://kit.fontawesome.com/50e44597fa.js" crossorigin="anonymous"></script>
+    <script defer src="script.js"></script>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Recursive:wght@300&display=swap" rel="stylesheet">
   </head>
-
+  
   <body>
-
+    <button onclick="scrollToTop()" id="scrollBtn" title="Back to top">Top</button>
+    
+    <div class="grid">
     <!---Header-->    
-    <header class="flex-container">
-      <h1>Cove & Cottage</h1>
+    <header id="home" class="flex-container">
+      <h1><a href="#index.html">Cove & Cottage</a></h1>
       <p class="subtitle">Luxury Seaside <br>Accomodation</p>
       <nav>
         <span><a href="#gallery">Gallery</a></span>
@@ -65,8 +68,9 @@
     </div>
 
     <!---Footer-->
-    <footer>
+    <footer class="flex-container">
       <h3>footer</h3>
     </footer>
+  </div>
   </body>
 </html>
