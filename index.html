@@ -7,7 +7,6 @@
     <meta charset="UTF-8">
     <title>Cove & Cottage</title>  
     <script src="https://kit.fontawesome.com/50e44597fa.js" crossorigin="anonymous"></script>
-    <script defer src="scroll.js"></script>
     <script src="map.js"></script>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Recursive:wght@300&display=swap" rel="stylesheet">
@@ -18,7 +17,7 @@
     
     <div class="grid">
     <!---Header-->    
-    <header id="home" class="flex-container">
+    <header id="home" class="flex-header">
       <h1><a onclick="scrollToTop()">Cove & Cottage</a></h1>
       <p class="subtitle">Luxury Seaside <br>Accomodation</p>
       <nav>
@@ -30,7 +29,7 @@
     </header>
 
     <!---Image Carousel-->
-    <div id="gallery" class="carousel flex-container">
+    <div id="gallery" class="carousel flex-gallery">
       <div class="img-slide">
         <img src="./Resources/3.jpg">
       </div>
@@ -45,55 +44,52 @@
     </div>
 
     <!--About Section-->
-    <div id="aboutSection" class="about flex-container">
-      <div class="left">
+    <div id="aboutSection" class="about">
+      <div class="left flex-container">
         <h3 class="section-header">About</h3>
         <p class="text">
           Charming coastal accomodation. A stone's throw from the beach. Come and experience the radiant beauty of the Garden Route.
         </p>
       </div>
 
-      <div class="right">
+      <div class="right flex-container">
         <img src="Resources/2.jpg">
       </div>
     </div>
 
     <!---Contact Section-->
-    <div id="contactSection" class="contact">
-      <div class="left">
-
+    <div id="contactSection" class="contact ">
+      <div class="left flex-container">
+        <img src="Resources/trune.jpg">
       </div>
-
-      <div class="right">
-
+      <div class="right flex-container">
+        <h3 class="section-header">Contact</h3>
+        <p class="text">To make an enquiry, contact Trune Snyman</p>
       </div>
     </div>
 
     <!--Location Section-->
-    <div id="locationSection" class="location flex-container">
-      <div class="left">
+    <div id="locationSection" class="location">
+      <div class="left address flex-container">
         <h3 class="section-header">Address</h3>
         <img src="./Resources/icons8-google-maps-48.png">
         <h4>10 Huckle St</h4>
         <p>Mossel Bay<br>6500</p>
       </div>
-      <div id="map" class="right">
+      <div id="map" class="right flex-container">
 
       </div>
     </div>
 
     <!---Footer-->
-    <footer class="flex-container">
+    <footer class="flex-footer">
       <span><a class="terms" href="#">Terms & Conditions</a></span>
-      <div class="footer-items">
-        <h4>&COPY; Cove&Cottage 2021</h4>
+        <h4>&COPY; Cove & Cottage 2021</h4>
         <h4>Website by <span><a href="#">C. de Waal</a></span></h4>
-      </div>
     </footer>
   </div>
 
     <!-- Async script executes immediately and must be after any DOM elements used in callback. -->
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBsTBRux1uWuguAihJFsRXJTsD20fY4hEI&callback=initMap&libraries=&v=weekly" async></script>
-
   </body>
 </html>
