@@ -23,7 +23,7 @@
       <p class="subtitle">Luxury Seaside <br>Accomodation</p>
       <nav>
         <span><a href="#aboutSection">About</a></span>
-        <span><a href="#rooms">Rooms</a></span>
+        <span><a href="#villa">Rooms</a></span>
         <span><a href="#gallery">Gallery</a></span>
         <span><a href="#contactSection">Contact</a></span>
         <span><a href="#locationSection">Location</a></span>
@@ -31,7 +31,7 @@
     </header>
 
     <!---Image Carousel-->
-    <div id="carousel" class="carousel flex-gallery">
+    <section id="carousel" class="carousel flex-gallery">
       <div class="img-slide">
         <img src="./Resources/3.jpg">
       </div>
@@ -43,12 +43,12 @@
       <div class="img-slide">
         <img src="./Resources/2.jpg">
       </div>
-    </div>
+    </section>
 
     <!--About Section-->
-    <div id="aboutSection" class="about">
+    <section id="about" class="about">
       <div class="left flex-container">
-        <h3 class="section-header">About</h3>
+        <h2>About</h2>
         <p class="text">
           Charming coastal accomodation. A stone's throw from the beach. Come and experience the radiant beauty of the Garden Route.
         </p>
@@ -57,17 +57,34 @@
       <div class="right flex-container">
         <img class="aboutImage" src="Resources/2.jpg">
       </div>
-    </div>
+    </section>
 
     <!--Rooms Section-->
-    <div id="rooms" class="rooms">
+    <section class="villa top">
+      ::before
+      <a id="villa" class="scroll"></a>
+      <h2>The Villa</h2>
+      <div class="area">
+        <article class="kitchen" id="kitchen"></article>
+        <article class="room" id="room"></article>
+        <article class="bath" id="bath"></article>
+        <article class="outside" id="outside"></article>
+      </div>
+      <div class="block" id="kitchen">
+        <h3>Lounge & Kitchen</h3>
+        <picture>::before</picture>
+        <p>The Villa features a beautifull open plan kitchen and contains all the utilities you could possibly need. Although the villa is self-catering, fresh produce packages are offered per request.</p>
+      </div>
+      <div class="block" id="room"></div>
+      <div class="block" id="bath"></div>
+      <div class="block" id="outside"></div>
+    </section>
+
+    <!-- <div id="rooms" class="rooms">
       <div class="space">
         <div class="sticky">
-          <!---<h3>The Old Stone Villa</h3>
-          <p>The Old Stone Villa is dsagasdfadsgadgsa</p>--->
           <div class="scrollable">
             <section role="feed" class="scroll-content">
-              <article class="sample-card"></article>
               <article class="sample-card"></article>
               <article class="sample-card"></article>
               <article class="sample-card"></article>
@@ -75,10 +92,10 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> --->
 
     <!---Contact Section-->
-    <div id="contactSection" class="contact ">
+    <section id="contactSection" class="contact ">
       <div class="left flex-container">
         <img class="trune" src="Resources/trune.jpg">
       </div>
@@ -92,10 +109,10 @@
           <h4 class="item">stay@mosselbay.co.za</h4>
       </div>
       </div>
-    </div>
+    </section>
 
     <!--Location Section-->
-    <div id="locationSection" class="location">
+    <section id="locationSection" class="location">
       <div class="left address flex-container">
         <h3 class="section-header">Address</h3>
         <img src="./Resources/icons8-google-maps-48.png">
@@ -105,12 +122,12 @@
       <div id="map" class="right flex-container">
 
       </div>
-    </div>
+    </section>
 
     <!---Connect Section-->
-    <div>
+    <section class="connect">
 
-    </div>
+    </section>
 
     <!---Footer-->
     <footer class="flex-footer">

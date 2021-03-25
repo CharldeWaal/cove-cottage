@@ -20,12 +20,11 @@ body {
 .grid {
     display:grid;
     grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: 60px 80vh 100vh 240vh 70vh 60vh 40px;
     grid-template-areas: 
         "header header header header header header"
         "gallery gallery gallery gallery gallery gallery"
-        "rooms rooms rooms rooms rooms rooms"
         "about about about about about about"
+        "villa villa villa villa villa villa"
         "contact contact contact contact contact contact"
         "map map map map map map"
         "footer footer footer footer footer footer";
@@ -38,14 +37,12 @@ header {
     position: fixed;
     z-index: 10;
     width: 100%;
+    min-height: 60px;
     background-color: #ffffff;
     grid-area: header;
-    /*grid-column-start: 1;
-    grid-column-end: 7;*/
-    grid-row: 1 / span 1;
 }
 
-header h1 {
+h1 {
     margin-left: 30px;
     font-size: 1rem;
     cursor: pointer;
@@ -87,10 +84,11 @@ a {
 }
 
 .carousel {
+    height: auto;
+    min-height: calc(100vh - 60px);
     width: 100%;
     flex-wrap: wrap;
     grid-area: gallery;
-    grid-row: 2 / span 1;
 }
 
 /* Image Carousel */
@@ -108,7 +106,8 @@ a {
     grid-area: about;
     display: grid;
     grid-template-columns: repeat(2, 50%);
-    grid-row: 3 / span 1;
+    height: auto;
+    min-height: 100vh;
     width: 100%;
     background-color: #fff5de;
 }
@@ -147,55 +146,19 @@ a {
     height: 360px;
 }
 
-.rooms {
-    grid-area: rooms;
+.villa {
+    grid-area: villa;
     width: 100%;
-    grid-row: 4 / span 1;
+    height: auto;
+    min-height: calc(100vh - 60px);
 }
-
-.space {
-    position: relative;
-    width: 100%;
-}
-
-.sticky {
-    position: sticky;
-    top: 0;
-    height: 100vh;
-    width: 100%;
-    overflow-x: hidden;
-}
-
-.scrollable {
-    position: absolute;
-    height: 100%;
-    will-change: transform;
-}
-
-.scroll-content {
-    position: relative;
-    height: 100%;
-    padding: 0 0 0 150px;
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: flex-start;
-    align-items: center;
-  }
-  
-  .sample-card {
-    position: relative;
-    height: 300px;
-    width: 500px;
-    background-color: #111f30;
-    margin-right: 75px;
-    flex-shrink: 0;
-  }
 
 .contact {
     grid-area: contact;
     display: grid;
     grid-template-columns: repeat(2, 50%);
-    grid-row: 5 / span 1;
+    height: auto;
+    min-height: 100vh;
     width: 100%;
     background-color: #22313f;
     color: rgb(241, 241, 241);
@@ -232,21 +195,12 @@ a {
     height: 340px;
     width: 350px;
     margin-left: 140px;
-    animation: rotate 1s linear infinite;
-
-    animation-iteration-count: 1;
-    animation-fill-mode: both;
-}
-
-@keyframes rotate {
-    to {
-        transform: rotate(360deg);
-    }
 }
 
 .location {
     grid-area: map;
-    grid-row: 6 / span 1;
+    height: auto;
+    min-height: 60vh;
     display: grid;
     grid-template-columns: repeat(2, 50%);
     width: 100%;
@@ -264,7 +218,8 @@ a {
 
 footer {
     grid-area: footer;
-    grid-row: 7 / span 1;
+    height: auto;
+    max-height: 60px;
     width: 100%;
     background-color: black;
 }
