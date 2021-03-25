@@ -4,6 +4,10 @@
     padding: 0;
   }
 
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
 html, body {
     height: 100vh;
     scroll-behavior: smooth;
@@ -148,9 +152,62 @@ a {
 
 .villa {
     grid-area: villa;
+    position: relative;
     width: 100%;
     height: auto;
     min-height: calc(100vh - 60px);
+    background-color: #22313f;
+    color: #fff;
+}
+
+section.villa::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50vw);
+    width: 100vw;
+    height: 100%;
+    background: inherit;
+}
+
+main section a.scroll {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateY(-100%);
+    display: block;
+    height: 60px;
+    pointer-events: none;
+}
+
+section.villa.acive h2{
+    position: fixed;
+    top: 92px;
+}
+
+@media (max-width: 1280px){
+section.villa h2 {
+    left: -2px;
+    margin-left: calc(((3/12) * (100% - 20px) + 20px));
+}
+}
+
+section.villa.active .area {
+    position: fixed;
+    top: calc(50vh + 36px);
+    transform: translateY(-50%);
+}
+
+section.villa .area {
+    left: 0;
+    margin-left: calc(50% - 50vw);
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    width: 100vw;
+    height: auto;
 }
 
 .contact {
@@ -160,8 +217,8 @@ a {
     height: auto;
     min-height: 100vh;
     width: 100%;
-    background-color: #22313f;
-    color: rgb(241, 241, 241);
+    background-color: #ffffff;
+    color: #727272;
 }
 
 .item-container {
