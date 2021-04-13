@@ -7,8 +7,7 @@
     <meta charset="UTF-8">
     <title>Old Stone Villa & Cottage</title>  
     <script src="https://kit.fontawesome.com/50e44597fa.js" crossorigin="anonymous"></script>
-    <script src="map.js"></script>
-    <script async src="scroll.js"></script>
+    <script src="map.js"></script>   
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Recursive:wght@300&display=swap" rel="stylesheet">
   </head>
@@ -49,9 +48,9 @@
     <!--About Section-->
     <section id="about" class="about">
       <div class="about-left">
-        <img src="Resources/shellDark.svg" alt="Shell icon">
+        <img class="fade-in" src="Resources/shellDark.svg" alt="Shell icon">
         <h2>Story</h2>
-        <p class="text">
+        <p class="text fade-in">
           The beautiful 130 year Old Stone Villa with original pine floors & modern finishes, offers a warm welcome to 6 guests.
           <br>
           <br>
@@ -60,15 +59,15 @@
       </div>
 
       <div class="about-right">
-        <img class="stack-top" src="Resources/top.jpg" alt="Image of the Villa's pool area">
-        <img class="stack-bottom" src="Resources/bottom.jpg" alt="Decorative image of sunlight and shadows on the Villa's wooden floor">
+        <img class="stack-top" src="Resources/top.jpg" loading="lazy" alt="Image of the Villa's pool area">
+        <img class="stack-bottom" src="Resources/bottom.jpg" loading="lazy" alt="Decorative image of sunlight and shadows on the Villa's wooden floor">
       </div>
     </section>
 
     <!--Villa Section-->
     <section class="villa">
       <a id="villa" class="scroll"></a>
-      <h2>The Villa</h2>
+      <!---<h2>The Villa</h2>
       <div class="area">
         <article class="kitchen" id="kitchen">
           <h3>Lounge & Kitchen</h3>
@@ -95,7 +94,7 @@
       <div class="block" id="kitchen"></div>
       <div class="block" id="room"></div>
       <div class="block" id="bath"></div>
-      <div class="block" id="outside"></div>
+      <div class="block" id="outside"></div>--->
     </section>
 
     <!---Villa Gallery Section-->
@@ -183,8 +182,8 @@
       </div>
     </section>
 
-    <!---Connect Section-->
-    <section class="connect">
+    <!---Social Section-->
+    <section class="social">
 
     </section>
 
@@ -198,5 +197,6 @@
 
     <!-- Async script executes immediately and must be after any DOM elements used in callback. -->
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBsTBRux1uWuguAihJFsRXJTsD20fY4hEI&callback=initMap&libraries=&v=weekly" async></script>
+    <script src="observers.js"></script>
   </body>
 </html>
