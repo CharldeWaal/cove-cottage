@@ -37,6 +37,7 @@ body {
         "gallery gallery gallery gallery gallery gallery"
         "about about about about about about"
         "villa villa villa villa villa villa"
+        "villa-collage villa-collage villa-collage villa-collage villa-collage villa-collage"
         "cottage cottage cottage cottage cottage cottage"
         "contact contact contact contact contact contact"
         "map map map map map map"
@@ -152,11 +153,70 @@ a {
     margin-right: 20px;
 }
 
-.aboutImage {
+section.about .about-left{
+    grid-column: 1 / span 1;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(12, calc((100vh - 60px) / 12));
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+section.about .about-left img{
+    display: block;
+    position: relative;
+    height: 120px;
+    width: 120px;
+    grid-column: 7 /span 3;
+    grid-row: 3 / span 4;
+    z-index: 1;
+}
+
+section.about .about-left h2{
+    text-align: left;
+    grid-column: 5 / span 2;
+    grid-row: 4 / span 2;
+    z-index: 2;
+
+}
+
+section.about .about-left p{
+    text-align: left;
+    grid-column: 2 / 12;
+    grid-row: 6 / span 5;
+    z-index: 2;
+}
+
+section.about .about-right{
+    grid-column: 2 / span 1;
+    margin-left: 20px;
+    margin-right: 20px;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(12, calc((100vh - 60px) / 12));
+}
+
+section.about .stack-top{
+    display: block;
+    position: relative;
+    grid-row: 5 / span 4;
+    grid-column: 1 / span 8;
+    padding-top: 20%;
+    z-index: 1; 
+}
+
+section.about .stack-bottom{
+    display: block;
+    position: relative;
+    grid-column: 4 / -1;
+    grid-row: 4 / span 4;
+}
+
+section.about .about-right img{
     display: block;
     max-width: 100%;
     width: 600px;
-    height: 360px;
+    height: 400px;
 }
 
 section.villa {
@@ -359,6 +419,40 @@ section.villa .area.kitchen article.kitchen p, section.villa .area.room article.
 {
 	opacity: 1;
 	transition-delay: 400ms
+}
+
+section.villa-collage{
+    grid-area: villa-collage;
+    width: 100%;
+    min-height: calc(100vh - 60px);
+    height: auto;
+}
+
+section.villa-collage ul{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 2vmin;
+    list-style: none;
+}
+
+section.villa-collage ul::after{
+    content:'';
+    display:block;
+    flex-grow: 10;
+}
+
+section.villa-collage li{
+    height: 40vh;
+    flex-grow: 1;
+    margin: 2vmin;
+}
+
+section.villa-collage img{
+    max-height: 100%;
+    min-width: 100%;
+    object-fit: cover;
+    vertical-align: bottom;
+    border-radius: 1vmin;
 }
 
 .cottage {
