@@ -5,10 +5,10 @@
     <link rel="shortcut icon" href="./Resources/icons8-shell-80.png" type="image/x-icon">
     <link rel='stylesheet' href='./styles.css' type='text/css'>
     <meta charset="UTF-8">
-    <title>Cove & Cottage</title>  
+    <title>Old Stone Villa & Cottage</title>  
     <script src="https://kit.fontawesome.com/50e44597fa.js" crossorigin="anonymous"></script>
     <script src="map.js"></script>
-    <script defer src="scroll.js"></script>
+    <script async src="scroll.js"></script>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Recursive:wght@300&display=swap" rel="stylesheet">
   </head>
@@ -19,13 +19,14 @@
     <div class="grid">
     <!---Header-->    
     <header id="home" class="flex-header">
-      <h1><a onclick="scrollToTop()">Cove & Cottage</a></h1>
-      <p class="subtitle">Luxury Seaside <br>Accomodation</p>
+      <h1><a onclick="scrollToTop()">Old Stone Villa & Cottage</a></h1>
+      <!--<p class="subtitle">Charming Seaside <br>Accomodation</p>--->
       <nav>
-        <span><a href="#about">About</a></span>
-        <span><a href="#villa">Rooms</a></span>
-        <span><a href="#gallery">Gallery</a></span>
-        <span><a href="#contactSection">Contact</a></span>
+        <span><a href="#about">Story</a></span>
+        <span><a href="#villa">Villa</a></span>
+        <span><a href="#cottage">Cottage</a></span>
+        <span><a href="#gallery">Explore</a></span>
+        <span><a href="#contactSection">Connect</a></span>
         <span><a href="#locationSection">Location</a></span>
       </nav>
     </header>
@@ -48,7 +49,7 @@
     <!--About Section-->
     <section id="about" class="about">
       <div class="left flex-container">
-        <h2>About</h2>
+        <h2>Story</h2>
         <p class="text">
           Charming coastal accomodation. A stone's throw from the beach. Come and experience the radiant beauty of the Garden Route.
         </p>
@@ -59,10 +60,43 @@
       </div>
     </section>
 
-    <!--Rooms Section-->
-    <section class="villa top">
+    <!--Villa Section-->
+    <section class="villa">
       <a id="villa" class="scroll"></a>
       <h2>The Villa</h2>
+      <div class="area">
+        <article class="kitchen" id="kitchen">
+          <h3>Lounge & Kitchen</h3>
+          <picture style="--villaProgress: villaProgress">
+          </picture>
+          <p>The Villa features a beautifull open plan kitchen and contains all the utilities you could possibly need. Although the villa is self-catering, fresh produce packages are offered per request.</p>
+        </article>
+        <article class="room" id="room">
+          <h3>Rooms</h3>
+          <picture></picture>
+          <p>The Villa comfortable sleeps 6. Each room features an en-suite batchroom.</p>
+        </article>
+          <article class="bath" id="bath">
+          <h3>Bathrooms</h3>
+          <picture></picture>
+          <p>sadonfakljsfasjdads</p>
+        </article>
+        <article class="outside active" id="outside">
+          <h3></h3>
+          <picture></picture>
+          <p></p>
+        </article>
+      </div>
+      <div class="block" id="kitchen"></div>
+      <div class="block" id="room"></div>
+      <div class="block" id="bath"></div>
+      <div class="block" id="outside"></div>
+    </section>
+
+    <!--Cottage Section-->
+   <!-- <section class="cottage top">
+      <a id="cottage" class="scroll"></a>
+      <h2>The Cottage</h2>
       <div class="area">
         <article class="kitchen" id="kitchen"></article>
         <article class="room" id="room"></article>
@@ -77,7 +111,7 @@
       <div class="block" id="room"></div>
       <div class="block" id="bath"></div>
       <div class="block" id="outside"></div>
-    </section>
+    </section>--->
 
     <!-- <div id="rooms" class="rooms">
       <div class="space">
@@ -99,7 +133,7 @@
         <img class="trune" src="Resources/trune.jpg">
       </div>
       <div class="right flex-container">
-        <h3 class="section-header">Contact</h3>
+        <h3 class="section-header">Connect</h3>
         <p class="text">To make an enquiry, find out about our rates or to make a booking, please feel free to contact us</p>
         <div class="item-container">
           <img class="icon" src="./Resources/icons8-phone-48.png">
