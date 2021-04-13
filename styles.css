@@ -42,6 +42,7 @@ body {
         "cottage cottage cottage cottage cottage cottage"
         "connect connect connect connect connect connect"
         "map map map map map map"
+        "social social social social social social"
         "footer footer footer footer footer footer";
     grid-column-gap: 20px;
 }
@@ -456,8 +457,8 @@ section.villa-collage .one{
     width: 100%;
 }
 section.villa-collage .two{
-    grid-column: 4 / span 3;
-    grid-row: 5 / span 6;
+    grid-column: 5 / span 3;
+    grid-row: 6 / span 4;
     width: 100%;
 }
 
@@ -474,8 +475,8 @@ section.villa-collage .four{
 }
 
 section.villa-collage .five{
-    grid-column: 6 / span 3;
-    grid-row: 6 / span 4;
+    grid-column: 7 / span 3;
+    grid-row: 7 / span 4;
     width: 100%;
 }
 
@@ -513,8 +514,10 @@ section.connect {
     flex-direction: column;
     min-height: calc(100vh - 60px);
     width: 100%;
-    background-color: #ffffff;
-    color: #727272;
+    background-color: #22313f;
+    color: #fff;
+    /*background-color: #ffffff;
+    color: #727272;*/
 }
 
 section.connect h2{
@@ -523,6 +526,10 @@ section.connect h2{
 
 section.connect p{
     text-align: center;
+}
+
+section.connect img{
+    width: 40px;
 }
 
 .location {
@@ -542,6 +549,19 @@ section.connect p{
 
 .address {
     padding-left: 50px;
+}
+
+/* Social Section */
+section.social{
+    margin: 60px;
+    grid-area: social;
+
+    display: flex;
+    justify-content: space-evenly;
+}
+
+section.social img{
+    width: 100px;
 }
 
 footer {
